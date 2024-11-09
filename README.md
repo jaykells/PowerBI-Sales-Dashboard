@@ -1,4 +1,4 @@
-# Power BI Sales Dashboard | Power BI End-to-End Project
+# Power BI Sales Dashboard | Project
 
 This repository provides a step-by-step approach to creating a comprehensive sales analysis dashboard that visualizes key performance indicators (KPIs), sales trends, and comparative analysis using Power BI.
 
@@ -26,8 +26,6 @@ This project demonstrates how to:
 - **Data Modeling & Relationship Building**
 - **DAX Calculations**
 - **Sales & Profit Analysis**
-
-# PowerBI-Sales-Dashboard
 
 ## Steps Followed to Create Power BI Sales Dashboard
 1. **Gather Data**: Sample data used for dashboard creation. [Excel.](https://github.com/jaykells/PowerBI-Sales-Dashboard/raw/refs/heads/main/Sales%20Analysis%20Report.xlsx)
