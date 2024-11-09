@@ -2,7 +2,7 @@
 
 This repository provides a step-by-step approach to creating a comprehensive sales analysis dashboard that visualizes key performance indicators (KPIs), sales trends, and comparative analysis using Power BI.
 
-![Dashboard Overview](Dashboard_Screenshots/Overview_Dashboard.png)
+![Dashboard](https://github.com/jaykells/PowerBI-Sales-Dashboard/raw/aad95203a447ead6ba69a701b636da89ff7a36fb/Sales%20Dashboard.pbix)
 
 ## Project Objectives
 
