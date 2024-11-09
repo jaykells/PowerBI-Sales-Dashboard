@@ -46,13 +46,24 @@ Key Metrics: Sales, Profit, Profit Margin, Products Sold
 
 6. **Implement DAX Calculations**: Used DAX to create measures and calculated columns for advanced calculations:
 
-```daxSales: Sales = SUM(Sales_Data[Sales])```dax
-```daxSales PY: Sales PY = CALCULATE([Sales], SAMEPERIODLASTYEAR(DateTable[Date]))```dax
-```daxSales vs PY: Sales vs PY = [Sales] - [Sales PY]```dax
-```daxYOY% Change: Sales vs py % = DIVIDE([Sales vs PY],[Sales],0)```dax
-```daxProfit: Profit = SUM(Sales_Data[Profit])```dax
-```daxProfit vs LY: Profit Vs LY = [Profit] - CALCULATE([Profit], SAMEPERIODLASTYEAR(DateTable[Date]))```dax
-```daxProfit Margin: Profit Margin = DIVIDE([Profit],[Sales],0)```dax
+Sales = SUM(Sales_Data[Sales])
+
+Sales PY = CALCULATE([Sales], SAMEPERIODLASTYEAR(DateTable[Date]))
+
+Sales vs PY = [Sales] - [Sales PY]
+
+Sales vs PY % = DIVIDE([Sales vs PY], [Sales], 0)
+
+Profit = SUM(Sales_Data[Profit])
+
+Profit LY = CALCULATE([Profit], SAMEPERIODLASTYEAR(DateTable[Date]))
+
+Profit vs LY = [Profit] - [Profit LY]
+
+Profit vs LY % = [Profit vs LY] / [Profit]
+
+Profit Margin = DIVIDE([Profit], [Sales], 0)
+
 
 **Conclusion**:
 
