@@ -40,10 +40,30 @@ This dashboard provides foundational insights into sales performance. Future ite
 # PowerBI-Sales-Dashboard
 
 ## Steps Followed to Create Power BI Sales Dashboard
-1. **Gather Data**  
-   Sample data used for dashboard creation. [Excel.](https://github.com/jaykells/PowerBI-Sales-Dashboard/raw/refs/heads/main/Sales%20Analysis%20Report.xlsx)
-2. **Power Query – Data Extract, Transform & Load**
-Power Query Editor in Power BI was used for data cleaning and transformation making it suitable for analysis. This involved removing duplicates, handling missing values, merging datasets, and creating calculated columns.
-3. **Create a Date Table**
-To work with Data Analysis Expressions (DAX) time intelligence functions, there’s a prerequisite model requirement - To have at least one [date table](https://learn.microsoft.com/en-us/power-bi/guidance/model-date-tables).
+1. **Gather Data**: Sample data used for dashboard creation. [Excel.](https://github.com/jaykells/PowerBI-Sales-Dashboard/raw/refs/heads/main/Sales%20Analysis%20Report.xlsx)
+2. **Power Query – Data Extract, Transform & Load**: Power Query Editor in Power BI was used for data cleaning and transformation making it suitable for analysis. This involved removing duplicates, handling missing values, merging datasets, and creating calculated columns.
+3. **Create a Date Table**: To work with Data Analysis Expressions (DAX) time intelligence functions, there’s a prerequisite model requirement - To have at least one [date table](https://learn.microsoft.com/en-us/power-bi/guidance/model-date-tables).
+## Creating a Simple Date Table in Power BI using DAX
+
+1. Open Power BI Desktop and click on the “Modeling” tab.
+2. Click on “New Table” to create a new table.
+3. In the formula bar, enter the following DAX formula to create a date table:
+
+```dax
+DAX DateTable = 
+ADDCOLUMNS (
+    //CALENDAR(DATE(2020,1,1), DATE(2024,12,31)),
+    CALENDARAUTO(),
+    "Year", YEAR([Date]),
+    "Quarter", "Q" & FORMAT(CEILING(MONTH([Date])/3, 1), "#"),
+    "Quarter No", CEILING(MONTH([Date])/3, 1),
+    "Month No", MONTH([Date]),
+    "Month Name", FORMAT([Date], "MMMM"),
+    "Month Short Name", FORMAT([Date], "MMM"),
+    "Month Short Name Plus Year", FORMAT([Date], "MMM,yy"),
+    "DateSort", FORMAT([Date], "yyyyMMdd"),
+    "Day Name", FORMAT([Date], "dddd"),
+    "Details", FORMAT([Date], "dd-MMM-yyyy"),
+    "Day Number", DAY ( [Date] )
+)
 
