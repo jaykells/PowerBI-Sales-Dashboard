@@ -42,4 +42,8 @@ This dashboard provides foundational insights into sales performance. Future ite
 ## Steps Followed to Create Power BI Sales Dashboard
 1. **Gather Data**  
    Sample data used for dashboard creation. [Excel.](https://github.com/jaykells/PowerBI-Sales-Dashboard/raw/refs/heads/main/Sales%20Analysis%20Report.xlsx)
+2. **Power Query – Data Extract, Transform & Load**
+Power Query Editor in Power BI was used for data cleaning and transformation making it suitable for analysis. This involved removing duplicates, handling missing values, merging datasets, and creating calculated columns.
+3. **Create a Date Table**
+To work with Data Analysis Expressions (DAX) time intelligence functions, there’s a prerequisite model requirement - To have at least one [date table](https://learn.microsoft.com/en-us/power-bi/guidance/model-date-tables).
 
