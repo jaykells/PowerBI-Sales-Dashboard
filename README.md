@@ -64,8 +64,8 @@ ADDCOLUMNS (
     "DateSort", FORMAT([Date], "yyyyMMdd"),
     "Day Name", FORMAT([Date], "dddd"),
     "Details", FORMAT([Date], "dd-MMM-yyyy"),
-    "Day Number", DAY ( [Date] )
-)
+    "Day Number", DAY ( [Date] ))
+
 4. **Create Data Model**: Designed a data model to represent relationships between tables, define keys, and establish hierarchies for accurate analysis and visualization.
 
 5. **Develop Reports**: Built interactive reports with visualizations (charts, tables, maps) in Power BI Desktop. Implemented slicers for Date, City, Product, and Channel, with drill-through capabilities.
