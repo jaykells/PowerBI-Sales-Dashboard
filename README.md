@@ -21,7 +21,6 @@ This project demonstrates how to:
 6. **Dynamic Slicers**: Filters for personalized data interaction.
 
 ## Folder Structure
-- **Data/**: Contains sample data used for dashboard creation.
 - **Dashboard_Screenshots/**: Contains screenshots of each major dashboard visualization.
 - **PBIX_File/**: Contains the Power BI project file for easy access and edits.
 - **Documentation/**: Additional documentation on project objectives, data preparation, data modeling, visualization design, and DAX implementation.
@@ -43,5 +42,5 @@ This dashboard provides foundational insights into sales performance. Future ite
 
 ## Steps Followed to Create Power BI Sales Dashboard
 1. **Gather Data**  
-   Collect the necessary data for your project. This could include data from various sources such as databases, spreadsheets, or web services. [Excel](https://github.com/jaykells/PowerBI-Sales-Dashboard/raw/refs/heads/main/Sales%20Analysis%20Report.xlsx)
+   Sample data used for dashboard creation. [Excel.](https://github.com/jaykells/PowerBI-Sales-Dashboard/raw/refs/heads/main/Sales%20Analysis%20Report.xlsx)
 
