@@ -39,10 +39,8 @@ This dashboard provides foundational insights into sales performance. Future ite
 - Predictive sales modeling for better forecasting.
 - Expanded dashboards for additional business areas.
 
-## License
-This project is open for educational purposes. Please attribute to [Datawolfs](https://github.com/Datawolfs).
 # PowerBI-Sales-Dashboard
 
 ## Steps Followed to Create Power BI Sales Dashboard
 1. **Gather Data**  
-   Collect the necessary data for your project. This could include data from various sources such as databases, spreadsheets, or web services. [Excel File](Sales Analysis Report.xlsx)
+   Collect the necessary data for your project. This could include data from various sources such as databases, spreadsheets, or web services. [Excel](Sales Analysis Report.xlsx)
