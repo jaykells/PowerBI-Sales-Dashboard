@@ -43,4 +43,5 @@ This dashboard provides foundational insights into sales performance. Future ite
 
 ## Steps Followed to Create Power BI Sales Dashboard
 1. **Gather Data**  
-   Collect the necessary data for your project. This could include data from various sources such as databases, spreadsheets, or web services. [Excel](PowerBI-Sales-Dashboard/Sales Analysis Report.xlsx)
+   Collect the necessary data for your project. This could include data from various sources such as databases, spreadsheets, or web services. [Excel](PowerBI-Sales-Dashboard/Sales%20Analysis%20Report.xlsx)
+
