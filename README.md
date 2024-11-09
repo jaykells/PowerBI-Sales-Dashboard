@@ -20,11 +20,6 @@ This project demonstrates how to:
 5. **Customer Sales Analysis**: Detailed customer-level insights.
 6. **Dynamic Slicers**: Filters for personalized data interaction.
 
-## Folder Structure
-- **Dashboard_Screenshots/**: Contains screenshots of each major dashboard visualization.
-- **PBIX_File/**: Contains the Power BI project file for easy access and edits.
-- **Documentation/**: Additional documentation on project objectives, data preparation, data modeling, visualization design, and DAX implementation.
-
 ## Skills Demonstrated
 - **Power BI Reporting & Visualization**
 - **Data Cleaning & Preparation**
@@ -32,18 +27,39 @@ This project demonstrates how to:
 - **DAX Calculations**
 - **Sales & Profit Analysis**
 
-## Future Work
-This dashboard provides foundational insights into sales performance. Future iterations could explore:
-- Enhanced customer segmentation analysis.
-- Predictive sales modeling for better forecasting.
-- Expanded dashboards for additional business areas.
-
 # PowerBI-Sales-Dashboard
 
 ## Steps Followed to Create Power BI Sales Dashboard
 1. **Gather Data**: Sample data used for dashboard creation. [Excel.](https://github.com/jaykells/PowerBI-Sales-Dashboard/raw/refs/heads/main/Sales%20Analysis%20Report.xlsx)
 2. **Power Query – Data Extract, Transform & Load**: Power Query Editor in Power BI was used for data cleaning and transformation making it suitable for analysis. This involved removing duplicates, handling missing values, merging datasets, and creating calculated columns.
 3. **Create a Date Table**: To work with Data Analysis Expressions (DAX) time intelligence functions, there’s a prerequisite model requirement - To have at least one [date table](https://learn.microsoft.com/en-us/power-bi/guidance/model-date-tables).
+4. **Create Data Model**: Designed a data model to represent relationships between tables, define keys, and establish hierarchies for accurate analysis and visualization.
+
+5. **Develop Reports**: Built interactive reports with visualizations (charts, tables, maps) in Power BI Desktop. Implemented slicers for Date, City, Product, and Channel, with drill-through capabilities.
+
+- Sales by Product (compared to last year)
+- Sales by Month (compared to last year)
+- Top 5 Cities by Sales
+- Profit by Channel (compared to last year)
+- Sales by Customer (compared to last year)
+Key Metrics: Sales, Profit, Profit Margin, Products Sold
+
+6. **Implement DAX Calculations**: Used DAX to create measures and calculated columns for advanced calculations:
+
+Sales: Sales = SUM(Sales_Data[Sales])
+Sales PY: Sales PY = CALCULATE([Sales], SAMEPERIODLASTYEAR(DateTable[Date]))
+Sales vs PY: Sales vs PY = [Sales] - [Sales PY]
+YOY% Change: Sales vs py % = DIVIDE([Sales vs PY],[Sales],0)
+Profit: Profit = SUM(Sales_Data[Profit])
+Profit vs LY: Profit Vs LY = [Profit] - CALCULATE([Profit], SAMEPERIODLASTYEAR(DateTable[Date]))
+Profit Margin: Profit Margin = DIVIDE([Profit],[Sales],0)
+
+**Conclusion**:
+
+Sales decreased by more than 10% in 2019.
+Top 7 products saw a decline in sales.
+Four customers contributed to the drop in sales.
+Profit margin was higher in the Export channel.
 
 **Creating a Simple Date Table in Power BI using DAX**
 
@@ -66,30 +82,4 @@ ADDCOLUMNS (
     "DateSort", FORMAT([Date], "yyyyMMdd"),
     "Day Name", FORMAT([Date], "dddd"),
     "Details", FORMAT([Date], "dd-MMM-yyyy"),
-    "Day Number", DAY ( [Date] ))```
-
-4. **Create Data Model**: Designed a data model to represent relationships between tables, define keys, and establish hierarchies for accurate analysis and visualization.
-
-5. **Develop Reports**: Built interactive reports with visualizations (charts, tables, maps) in Power BI Desktop. Implemented slicers for Date, City, Product, and Channel, with drill-through capabilities.
-
-- Sales by Product (compared to last year)
-- Sales by Month (compared to last year)
-- Top 5 Cities by Sales
-- Profit by Channel (compared to last year)
-- Sales by Customer (compared to last year)
-Key Metrics: Sales, Profit, Profit Margin, Products Sold
-6. **Implement DAX Calculations**: Used DAX to create measures and calculated columns for advanced calculations:
-
-Sales: Sales = SUM(Sales_Data[Sales])
-Sales PY: Sales PY = CALCULATE([Sales], SAMEPERIODLASTYEAR(DateTable[Date]))
-Sales vs PY: Sales vs PY = [Sales] - [Sales PY]
-YOY% Change: Sales vs py % = DIVIDE([Sales vs PY],[Sales],0)
-Profit: Profit = SUM(Sales_Data[Profit])
-Profit vs LY: Profit Vs LY = [Profit] - CALCULATE([Profit], SAMEPERIODLASTYEAR(DateTable[Date]))
-Profit Margin: Profit Margin = DIVIDE([Profit],[Sales],0)
-**Conclusion**:
-
-Sales decreased by more than 10% in 2019.
-Top 7 products saw a decline in sales.
-Four customers contributed to the drop in sales.
-Profit margin was higher in the Export channel.
+    "Day Number", DAY ( [Date] ))
